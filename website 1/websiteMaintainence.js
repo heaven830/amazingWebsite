@@ -8,11 +8,11 @@ function login(){
     const password = loginForm.password.value;
 
     if (username === "heaven830" && password === "HeavenLindenstruth") {
-        location.assign("file:///C:/Users/heave/OneDrive/Desktop/website%201/index.htm#");
+        location.assign("index.html");
 		localStorage.setItem("user", "heaven");
     }
 	else if (username === "incertae_sedis" && password === "SeanSanders") {
-        location.assign("file:///C:/Users/heave/OneDrive/Desktop/website%201/index.htm#");
+        location.assign("index.html");
 		localStorage.setItem("user", "sean");
     }
 	else {
@@ -22,9 +22,9 @@ function login(){
 
 function toMissYou(){
 	if(localStorage.getItem("user") === "heaven"){
-		location.assign("file:///C:/Users/heave/OneDrive/Desktop/website%201/thinkingOfYouHeaven.html");
+		location.assign("thinkingOfYouHeaven.html");
 	}
 	else{
-		location.assign("file:///C:/Users/heave/OneDrive/Desktop/website%201/thinkingOfYou.html");
+		location.assign("thinkingOfYou.html");
 	}
 }
