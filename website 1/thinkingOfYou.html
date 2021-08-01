@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button{
+color: black;
+background-color: white;
+border: none;
+border-radius: 100%;
+padding: 0px 0px;
+margin: 0px 0px;
+width: 160px;
+height: 160px;
+text-align: center;
+box-shadow: 0 9px #5c345d;
+}
+.button:hover {}
+
+.button:active {
+  box-shadow: 0 5px #5c345d;
+  transform: translateY(4px);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="font-size:300%; text-align:center; font-family: Lucida Handwriting">Thinking of You <3</h1>
+<p style = text-algin:center> This may be really dumb, but I decided to include a little to thing to let the other know when we are thinking of them. All you do is push your button and the icon saying you are thinking of me will go on for 30 minutes. </p>
+<button class = "button"; onclick = "showTheirImage()"><img class = "center" src = "seanButton.png" alt = "Sean's Button" width = "160px" height = "160px" border = "0"></button>
+<img id = "image">
+
+<script>
+if(localStorage.heavenActive == "true"){
+	setInterval(showImage(), 3600000);
+	clearInterval();
+	localStorage.heavenActive = "false";
+	document.getElementById("image").src = null;
+}
+function showTheirImage(){
+	localStorage.seanActive = "true";
+}
+function showMyImage(){
+	document.getElementById("image").src = "thinkingOfYouSean.png";
+	document.getElementById("image").alt = "Heaven is thinking about you";
+}
+</script>
+
+</body>
+</html>

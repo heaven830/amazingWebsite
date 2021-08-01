@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button{
+color: black;
+background-color: white;
+border: none;
+border-radius: 100%;
+padding: 0px 0px;
+margin: 0px 0px;
+width: 160px;
+height: 160px;
+text-align: center;
+box-shadow: 0 9px #5c345d;
+}
+.button:hover {}
+
+.button:active {
+  box-shadow: 0 5px #5c345d;
+  transform: translateY(4px);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="font-size:300%; text-align:center; font-family: Lucida Handwriting">Thinking of You <3</h1>
+<button class = "button"; onclick = "showTheirImage()"><img class = "center" src = "heavenButton.png" alt = "Sean's Button" width = "160px" height = "160px" border = "0"></button>
+<img id = "image">
+
+<script>
+if(localStorage.seanActive == "true"){
+	setInterval(showImage(), 3600000);
+	clearInterval();
+	localStorage.seanActive = "false";
+	document.getElementById("image").src = null;
+}
+function showTheirImage(){
+	localStorage.heavenActive = "true";
+}
+function showMyImage(){
+	document.getElementById("image").src = "thinkingOfYouHeaven.png";
+	document.getElementById("image").alt = "Sean is thinking about you";
+}
+</script>
+
+</body>
+</html>
