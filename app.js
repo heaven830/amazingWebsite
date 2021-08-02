@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
-const INDEX = '/index.html';
+const INDEX = '/loginPage.html';
 
 const server = express()
   .use(bodyParser.json())
